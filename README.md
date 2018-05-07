@@ -27,3 +27,25 @@ This program uses a word dictionary to unscrammble words. It contains most of th
 
 # Future Developments
 I plan to turn this program and make it into a django web app.
+
+# When the web app is complete...
+## Word Unscrambler, The Web App
+This python program outputs a list of the possible options a scrambled word could be.
+
+### About 
+This program was created by Martin Chaperot-Merino (Tinmarr)
+
+## How to use:
+1. [Go to the web site](https://word-unscrambler.herokuapp.com/)
+2. Once the page loads, enter your scrambled word in the prompt area.
+3. You will be redirected to a page with the possible unscrambled words.
+4. To unscramble another word, go click on the button underneath.
+
+### Extending this programs functions.
+This program uses a word dictionary to unscrammble words. It contains most of the english words. You may be required to xtend this dictionary.
+
+#### To do so:
+1. If you enter a word that is not in the dictionary, you will be told that the word is not in the dictionary and you will be given an option to add it.
+2. Click on the button.
+3. Enter the required information for the word.
+4. Once redirected back to the original page, click remake dictionary to update your dictionary.
