@@ -24,3 +24,6 @@ This program uses a word dictionary to unscrammble words. It contains most of th
 3. Go to the bottom of the document and add a new line.
 4. Copy and paste the extra words to the end of the dictionary.
 5. Save and close the file.
+
+# Future Developments
+I plan to turn this program and make it into a django web app.
