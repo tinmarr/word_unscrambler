@@ -36,7 +36,7 @@ This python program outputs a list of the possible options a scrambled word coul
 This program was created by Martin Chaperot-Merino (Tinmarr)
 
 ## How to use:
-1. [Go to the web site](https://word-unscrambler.herokuapp.com/)
+1. [Go to the web site](https://word-unscrambler--Tinmarr.repl.co)
 2. Once the page loads, enter your scrambled word in the prompt area.
 3. You will be redirected to a page with the possible unscrambled words.
 4. To unscramble another word, go click on the button underneath.
