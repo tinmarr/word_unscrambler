@@ -1,9 +1,3 @@
-
-# coding: utf-8
-
-# In[ ]:
-
-
 def RemoveFromList(thelist, val):
     return [value for value in thelist if value != val]
 
