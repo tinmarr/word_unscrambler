@@ -9,7 +9,7 @@ This program was created by [Martin Chaperot-Merino](https://github.com/tinmarr)
 2. Wait for the Prompt <br />
 ![The code asks to enter a scrambled word](step1.png)
 3. Enter a scrambled word <br />
-![The entered word is noctitusiont](step2.png)
+![The entered word is lleho](step2.png)
 4. Hit enter <br />
 ![The code return hello and asks if you want to restart](step3.png)
 
