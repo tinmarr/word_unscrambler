@@ -7,11 +7,11 @@ This program was created by [Martin Chaperot-Merino](https://github.com/tinmarr)
 # How to use
 1. Go [here](http://word-unscrambler.tinmarr.repl.run/)
 2. Load the Website <br />
-![](step1.png)
+![The code asks to enter a scrambled word](step1.png)
 3. Enter a scrambled word <br />
-![](step2.png)
+![The entered word is lleho](step2.png)
 4. Hit enter <br />
-![](step3.png)
+![The code return hello and asks if you want to restart](step3.png)
 
 # How it works
 It takes words from a text file and uses a lookup function to find words with the same letters (were the order of words does not matter).
