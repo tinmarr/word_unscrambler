@@ -18,3 +18,15 @@ It takes words from a text file and uses a lookup function to find words with th
 
 ## The key to its speed
 It converts all the words into integers (which is based on the letters) and groups words with the same integer in a dictionary. Then it converts the typed word into an integer and looks up that integer in the dictionary.
+```
+def Word2Vect(word):
+    l = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    v = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    w = word.lower()
+    wl = list(w)
+    for i in range(0, len(wl)):
+        if wl[i] in l:
+            ind = l.index(wl[i])
+            v[ind] += 1
+    return v
+```
