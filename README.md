@@ -14,7 +14,7 @@ This program was created by [Martin Chaperot-Merino](https://github.com/tinmarr)
 ![The code return hello and asks if you want to restart](step3.png)
 
 # How it works
-It takes words from a text file and uses a lookup function to find words with the same letters (were the order of words does not matter).
+It takes words from a text file and uses a lookup function to find words with the same letters (where the order of words does not matter).
 
 ## The key to its speed
 It converts all the words into integers (which is based on the letters) and groups words with the same integer in a dictionary. Then it converts the typed word into an integer and looks up that integer in the dictionary.
