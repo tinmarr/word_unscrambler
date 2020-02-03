@@ -29,4 +29,13 @@ def Word2Vect(word):
             ind = l.index(wl[i])
             v[ind] += 1
     return v
+    
+def Vect2Int(vect):
+    pv = 0
+    f = 0
+    for i in range(0, len(vect)):
+        wip = (vect[i]*(2**pv))
+        f += wip
+        pv += 4
+    return f
 ```
