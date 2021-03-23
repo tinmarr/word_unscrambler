@@ -1,11 +1,13 @@
 # Word-Unscrambler
 This python program outputs a list of the possible options a scrambled word could be.
 
+![Demo Gif](ezgif.com-gif-maker.gif)
+
 ## About 
 This program was created by [Martin Chaperot-Merino](https://github.com/tinmarr)
 
 # How to use
-1. Open the IDE: [http://word-unscrambler.tinmarr.repl.run/](http://word-unscrambler.tinmarr.repl.run/)
+1. Open the IDE: [https://replit.com/@Tinmarr/Word-Unscrambler?v=1](https://replit.com/@Tinmarr/Word-Unscrambler?v=1)
 2. Wait for the Prompt <br />
 ![The code asks to enter a scrambled word](step1.png)
 3. Enter a scrambled word <br />
