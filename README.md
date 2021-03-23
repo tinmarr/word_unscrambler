@@ -6,6 +6,8 @@ This python program outputs a list of the possible options a scrambled word coul
 ## About 
 This program was created by [Martin Chaperot-Merino](https://github.com/tinmarr)
 
+This word unscrambler can clean unstructured text before employing a named entities recognition (NER) algorithm. For example, the word unscrambler function can be applied to every word in a text file before looking these words up in a gazetteer (a list of entities such as cities, organizations, days of the week, etc.)
+
 # How to use
 1. Open the IDE: [https://replit.com/@Tinmarr/Word-Unscrambler?v=1](https://replit.com/@Tinmarr/Word-Unscrambler?v=1)
 2. Wait for the Prompt <br />
