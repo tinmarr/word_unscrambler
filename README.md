@@ -1,11 +1,11 @@
-# Word-Unscrambler
+# word_unscrambler
 
 This Rust program outputs a list of the possible options a scrambled word could be.
 
 _Looking for the Python version? Its been archived to the
 [python-version](https://github.com/tinmarr/Word-Unscrambler/tree/python-version) branch_
 
-![Demo Gif](ezgif.com-gif-maker.gif)
+![Demo Gif](demo_files/demo.gif)
 
 ## About
 
@@ -17,10 +17,10 @@ gazetteer (a list of entities such as cities, organizations, days of the week, e
 
 # How to use
 
-1. Open the IDE: [https://replit.com/@Tinmarr/Word-Unscrambler?v=1](https://replit.com/@Tinmarr/Word-Unscrambler?v=1)
-2. Wait for the Prompt <br /> ![The code asks to enter a scrambled word](step1.png)
-3. Enter a scrambled word <br /> ![The entered word is lleho](step2.png)
-4. Hit enter <br /> ![The code return hello and asks if you want to restart](step3.png)
+1. Clone the repo
+2. Run `cargo run`
+3. Enter a scrambled word
+4. Hit enter
 
 # How it works
 
@@ -30,36 +30,31 @@ does not matter).
 ## The key to its speed
 
 It converts all the words into integers (which is based on the letters) and groups words with the same integer in a
-dictionary. Then it converts the typed word into an integer and looks up that integer in the dictionary.
+`BTreeMap`. This is a hash map that uses a binary search tree instead of a hashing algorithm (faster for integers). Then
+it converts the typed word into an integer and looks up that integer in the map.
 
-A first function Word2Vect converts a word into a 26 dimensions vector. Each dimension represents the number of
-occurrences of a letter ('a', 'b', 'c'...).
+The function `word_2_int` (shown below) is what converts the word to an unsigned 128 bit integer. Every 4 bits
+represents the number of occurrences of a specific letter. For example, the string "aaabc" would be represented by 0000
+... 0001 0001 0011 or 275. The beauty of this system is that all words with those same letters will be represented by
+that same number. This allows us to use that number as the key for our map.
 
+```rust
+const LETTERS: [char; 26] = [
+    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+    't', 'u', 'v', 'w', 'x', 'y', 'z',
+];
+
+fn word_2_int(word: &String) -> u128 {
+    let mut word_int: u128 = 0;
+    for letter in word.chars() {
+        let i: u32 = match LETTERS.binary_search(&letter) {
+            Ok(i) => i,
+            Err(_) => continue,
+        }
+        .try_into()
+        .expect("If this panics something went horribly wrong");
+        word_int += 2u128.pow(4u32 * i);
+    }
+    word_int
+}
 ```
-def Word2Vect(word):
-    l = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-    v = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    w = word.lower()
-    wl = list(w)
-    for i in range(0, len(wl)):
-        if wl[i] in l:
-            ind = l.index(wl[i])
-            v[ind] += 1
-    return v
-```
-
-Then a second function Vect2Int converts a 26 dimensions vector into an integer. Each dimension is reduced to a 4 bits.
-All bits of the Integer are used to code the vector.
-
-```
-def Vect2Int(vect):
-    pv = 0
-    f = 0
-    for i in range(0, len(vect)):
-        wip = (vect[i]*(2**pv))
-        f += wip
-        pv += 4
-    return f
-```
-
-Using an integer as lookup value in a dictionary makes it run really fast!

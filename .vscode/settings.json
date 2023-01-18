@@ -1,5 +1,6 @@
 {
     "licenser.license": "GPLv3",
     "licenser.projectName": "word_unscrambler",
-    "licenser.author": "Martin Chaperot"
+    "licenser.author": "Martin Chaperot",
+    "cSpell.ignoreWords": ["aaabc"]
 }
