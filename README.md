@@ -2,8 +2,11 @@
 
 This Rust program outputs a list of the possible options a scrambled word could be.
 
-_Looking for the Python version? Its been archived to the
+_Looking for the Python version? Its in the
 [python-version](https://github.com/tinmarr/Word-Unscrambler/tree/python-version) branch_
+
+_Looking for the Go version? Its in he
+[python-version](https://github.com/tinmarr/Word-Unscrambler/tree/go-version) branch_
 
 ![Demo Gif](demo_files/demo.gif)
 
