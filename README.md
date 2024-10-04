@@ -6,7 +6,7 @@ _Looking for the Python version? Its in the
 [python-version](https://github.com/tinmarr/Word-Unscrambler/tree/python-version) branch_
 
 _Looking for the Go version? Its in he
-[python-version](https://github.com/tinmarr/Word-Unscrambler/tree/go-version) branch_
+[go-version](https://github.com/tinmarr/Word-Unscrambler/tree/go-version) branch_
 
 ![Demo Gif](demo_files/demo.gif)
 
