@@ -1,11 +1,8 @@
 # word_unscrambler
 
-This Rust program outputs a list of the possible options a scrambled word could be.
+This Go program outputs a list of the possible options a scrambled word could be.
 
-_Looking for the Python version? Its been archived to the
-[python-version](https://github.com/tinmarr/Word-Unscrambler/tree/python-version) branch_
-
-![Demo Gif](demo_files/demo.gif)
+Python and Rust version are available in other branches.
 
 ## About
 
